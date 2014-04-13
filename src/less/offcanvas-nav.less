@@ -1,0 +1,77 @@
+@ease-in-duration: 0.3s;
+@ease-out-duration: 0s;
+@menu-background-color: #2d2f33;
+@menu-text-color: #fff;
+
+html,body {
+	margin: 0;
+}
+
+nav {
+	background-color: @menu-background-color;
+	display: block;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	left: -20em;
+	font-size: 15px;
+	top: 0;
+	width: 20em;
+	z-index: 2000;
+
+	transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-webkit-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-moz-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-o-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav ul li {
+	list-style-type: none;
+	padding-left:5px;
+}
+
+nav a {
+	display: block;
+	color: @menu-text-color;
+	text-decoration: none;
+	padding: 10px 0;
+}
+
+nav li:hover {
+	background-color: lighten(@menu-background-color,30%);
+}
+
+.nav-expanded nav {
+	left: 0;
+}
+
+.nav-toggle {
+	background-color: @menu-background-color;
+	color: @menu-text-color;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	position: fixed;
+	left: 0;
+
+	transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-webkit-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-moz-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-o-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+}
+
+.nav-expanded {
+	margin-left: 0;
+	transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-webkit-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-moz-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+	-o-transition: left @ease-in-duration ease-in-out @ease-out-duration;
+}
+
+.nav-expanded .nav-toggle {
+	left: 18.7em;
+}
