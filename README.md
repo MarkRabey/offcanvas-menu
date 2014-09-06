@@ -3,7 +3,7 @@ offcanvas-menu
 
 Off Canvas Menu
 ___
-Check out my [blog post](http://markrabey.com/2014/04/13/off-canvas-navigation/) on building this menu.
+Check out my [blog post](http://markrabey.com/blog/2014/04/13/off-canvas-navigation/) on building this menu.
 
 ##Requirements
 I used jQuery 1.11.0, but in that the only thing I'm doing with jQuery is toggling a class, you can get away with a _much_ older version.
