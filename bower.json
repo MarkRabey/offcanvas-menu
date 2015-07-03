@@ -1,0 +1,25 @@
+{
+  "name": "offcanvas-menu",
+  "version": "0.1.0",
+  "homepage": "https://github.com/MarkRabey/offcanvas-menu",
+  "authors": [
+    "Mark Rabey <mark@markrabey.com>"
+  ],
+  "description": "A simple off-canvas navigation",
+  "keywords": [
+    "menu",
+    "navigation",
+    "off-canvas",
+    "javascript",
+    "css",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
