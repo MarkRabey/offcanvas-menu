@@ -1,7 +1,7 @@
 /** 
-* Package: scrolling-nav 
-* Author: Mark Rabey 
-* Build Time: 2014-04-13 14:24:27  
+* Package: offcanvas-menu - version 0.1.0 
+* Author: Mark Rabey <mark@markrabey.com> 
+* Build Time: 2015-07-03 14:12:20  
 */
 
-body,html{margin:0}nav{background-color:#2d2f33;display:block;height:100%;overflow:auto;position:fixed;left:-20em;font-size:15px;top:0;width:20em;z-index:2000;transition:left .3s ease-in-out 0s;-webkit-transition:left .3s ease-in-out 0s;-moz-transition:left .3s ease-in-out 0s;-o-transition:left .3s ease-in-out 0s}nav ul{padding:0}nav ul li{list-style-type:none;padding-left:5px}nav a{display:block;color:#fff;text-decoration:none;padding:10px 0}nav li:hover{background-color:#757a84}.nav-expanded nav{left:0}.nav-toggle{background-color:#2d2f33;color:#fff;padding:10px;text-decoration:none;display:block;position:fixed;left:0;transition:left .3s ease-in-out 0s;-webkit-transition:left .3s ease-in-out 0s;-moz-transition:left .3s ease-in-out 0s;-o-transition:left .3s ease-in-out 0s}.nav-expanded{margin-left:0;transition:left .3s ease-in-out 0s;-webkit-transition:left .3s ease-in-out 0s;-moz-transition:left .3s ease-in-out 0s;-o-transition:left .3s ease-in-out 0s}.nav-expanded .nav-toggle{left:18.7em}
+body,html{margin:0}.offcanvas-nav{background-color:#2d2f33;height:100%;overflow:auto;font-size:15px;top:0;width:300px;z-index:2000;transform:translateX(-300px);transition:transform ease-in .2s}.offcanvas-nav,.offcanvas-nav__toggle{display:block;position:fixed;-o-transition:transform ease-in .2s;-moz-transition:transform ease-in .2s;-webkit-transition:transform ease-in .2s}.offcanvas-nav--expanded,.offcanvas-nav__toggle{transform:translateX(0)}.offcanvas-nav__list{padding:0}.offcanvas-nav__item{list-style-type:none;padding-left:5px}.offcanvas-nav__item:hover{background-color:#757a84}.offcanvas-nav__link{display:block;color:#fff;text-decoration:none;padding:10px 0}.offcanvas-nav__toggle{background-color:#2d2f33;color:#fff;padding:10px;text-decoration:none;transition:transform ease-in .2s}.offcanvas-nav__toggle--expanded{transform:translateX(300px)}

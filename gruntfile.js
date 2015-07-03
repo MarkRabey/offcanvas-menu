@@ -1,12 +1,10 @@
 module.exports = function(grunt) {
-	var _banner = '/** \n* Package: <%= pkg.name %> \n* Author: <%= pkg.author %> \n* Build Time: <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %>  \n*/\n';
+
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		banner: '/** \n* Package: <%= pkg.name %> - version <%= pkg.version %> \n* Author: <%= pkg.author %> \n* Build Time: <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %>  \n*/\n',
 		uglify: {
-			options: {
-				banner: _banner
-			},
 			build: {
 				files: [{
 					cwd: 'src/js',
@@ -35,9 +33,6 @@ module.exports = function(grunt) {
 			} // close .build
 		}, // close csslint
 		cssmin: {
-			options: {
-				banner: _banner,
-			}, // close .options
 			build: {
 				files: [{
 					cwd: 'src/css',
@@ -49,9 +44,6 @@ module.exports = function(grunt) {
 			}, // close .build
 		}, // close cssmin
 		less: {
-			options: {
-				banner: _banner
-			},
 			build: {
 				files: [{
 					cwd: 'src/less',
@@ -86,7 +78,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: 'src/less/*.less',
-				tasks: ['less','cssmin'],
+				tasks: ['less','cssmin','usebanner'],
 				options: {
 					interrupt: true,
 				},
@@ -98,7 +90,20 @@ module.exports = function(grunt) {
 					interrupt: true,
 				},
 			},
-		}
+		},
+
+		usebanner: {
+	    js_css: {
+	      options: {
+	        position: 'top',
+	        banner: '<%= banner %>',
+	        linebreak: true
+	      },
+	      files: {
+	        src: [ 'dist/includes/css/offcanvas-nav.min.css', 'dist/includes/js/offcanvas-nav.min.js' ]
+	      }
+	    }
+	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -107,10 +112,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-banner');
 
 	// Default task(s).
-	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('devbuild', ['uglify','less','csslint','cssmin','jade']);
+	grunt.registerTask('default', ['devbuild', 'watch']);
+	grunt.registerTask('devbuild', ['uglify','less','csslint','cssmin','jade','usebanner']);
 
 	// grunt.event.on('watch', function(action, filepath, target) {
 	// 	grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
