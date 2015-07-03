@@ -1,5 +1,7 @@
 Off Canvas Menu
 ==============
+
+[![Join the chat at https://gitter.im/MarkRabey/offcanvas-menu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkRabey/offcanvas-menu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table)
 
 ___
