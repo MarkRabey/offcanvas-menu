@@ -1,7 +1,7 @@
-offcanvas-menu
-==============
-
 Off Canvas Menu
+==============
+[![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table)
+
 ___
 Check out my [blog post](http://markrabey.com/blog/2014/04/13/off-canvas-navigation/) on building this menu.
 
