@@ -113,8 +113,7 @@ module.exports = function(grunt) {
 	        src: ['dist/includes/js/offcanvas-nav.min.js']
 	      }
 	    }
-	  }
-
+	  },
 		bump: {
 	    options: {
 	      files: ['package.json', 'bower.json'],
@@ -132,7 +131,7 @@ module.exports = function(grunt) {
 	      prereleaseName: false,
 	      regExp: false
 	    }
-	  },
+	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
