@@ -2,61 +2,54 @@ html,
 body {
   margin: 0;
 }
-nav {
+.offcanvas-nav {
   background-color: #2d2f33;
   display: block;
   height: 100%;
   overflow: auto;
   position: fixed;
-  left: -20em;
   font-size: 15px;
   top: 0;
-  width: 20em;
+  width: 300px;
   z-index: 2000;
-  transition: left 0.3s ease-in-out 0s;
-  -webkit-transition: left 0.3s ease-in-out 0s;
-  -moz-transition: left 0.3s ease-in-out 0s;
-  -o-transition: left 0.3s ease-in-out 0s;
+  transform: translateX(-300px);
+  -o-transition: transform ease-in 0.2s;
+  -moz-transition: transform ease-in 0.2s;
+  -webkit-transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
 }
-nav ul {
+.offcanvas-nav--expanded {
+  transform: translateX(0);
+}
+.offcanvas-nav__list {
   padding: 0;
 }
-nav ul li {
+.offcanvas-nav__item {
   list-style-type: none;
   padding-left: 5px;
 }
-nav a {
+.offcanvas-nav__item:hover {
+  background-color: #757a84;
+}
+.offcanvas-nav__link {
   display: block;
   color: #ffffff;
   text-decoration: none;
   padding: 10px 0;
 }
-nav li:hover {
-  background-color: #757a84;
-}
-.nav-expanded nav {
-  left: 0;
-}
-.nav-toggle {
+.offcanvas-nav__toggle {
   background-color: #2d2f33;
   color: #ffffff;
   padding: 10px;
   text-decoration: none;
   display: block;
   position: fixed;
-  left: 0;
-  transition: left 0.3s ease-in-out 0s;
-  -webkit-transition: left 0.3s ease-in-out 0s;
-  -moz-transition: left 0.3s ease-in-out 0s;
-  -o-transition: left 0.3s ease-in-out 0s;
+  transform: translateX(0);
+  -o-transition: transform ease-in 0.2s;
+  -moz-transition: transform ease-in 0.2s;
+  -webkit-transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
 }
-.nav-expanded {
-  margin-left: 0;
-  transition: left 0.3s ease-in-out 0s;
-  -webkit-transition: left 0.3s ease-in-out 0s;
-  -moz-transition: left 0.3s ease-in-out 0s;
-  -o-transition: left 0.3s ease-in-out 0s;
-}
-.nav-expanded .nav-toggle {
-  left: 18.7em;
+.offcanvas-nav__toggle--expanded  {
+  transform: translateX(300px);
 }
