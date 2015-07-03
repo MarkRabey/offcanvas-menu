@@ -127,9 +127,4 @@ module.exports = function(grunt) {
 	// Default task(s).
 	grunt.registerTask('default', ['devbuild', 'watch']);
 	grunt.registerTask('devbuild', ['uglify','less','csslint','cssmin','jade','usebanner']);
-
-	// grunt.event.on('watch', function(action, filepath, target) {
-	// 	grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
-	// });
-
 };
