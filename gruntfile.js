@@ -93,14 +93,24 @@ module.exports = function(grunt) {
 		},
 
 		usebanner: {
-	    js_css: {
+	    css: {
 	      options: {
 	        position: 'top',
 	        banner: '<%= banner %>',
 	        linebreak: true
 	      },
 	      files: {
-	        src: [ 'dist/includes/css/offcanvas-nav.min.css', 'dist/includes/js/offcanvas-nav.min.js' ]
+	        src: ['dist/includes/css/offcanvas-nav.min.css']
+	      }
+	    },
+			js: {
+	      options: {
+	        position: 'top',
+	        banner: '<%= banner %>',
+	        linebreak: true
+	      },
+	      files: {
+	        src: ['dist/includes/js/offcanvas-nav.min.js']
 	      }
 	    }
 	  }
