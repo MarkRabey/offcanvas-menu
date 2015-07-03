@@ -1,21 +1,28 @@
 {
-  "name": "scrolling-nav",
-  "version": "0.0.1",
-  "description": "scrolling nav sample",
+  "name": "offcanvas-menu",
+  "version": "0.1.0",
+  "description": "Off-canvas Menu ",
   "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarkRabey/offcanvas-menu"
+  },
+  "bugs": {
+    "url": "https://github.com/MarkRabey/offcanvas-menu/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mark Rabey",
-  "license": "BSD-2-Clause",
+  "author": "Mark Rabey <mark@markrabey.com>",
+  "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-uglify": "~0.4.0",
-    "watch": "~0.9.0",
-    "grunt-contrib-less": "~0.10.0",
-    "grunt-contrib-csslint": "~0.2.0",
-    "grunt-contrib-cssmin": "~0.9.0",
-    "grunt-contrib-jade": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-csslint": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-jade": "^0.14.1",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "watch": "^0.16.0"
   }
 }

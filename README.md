@@ -3,10 +3,9 @@ Off Canvas Menu
 [![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table)
 
 ___
-Check out my [blog post](http://markrabey.com/blog/2014/04/13/off-canvas-navigation/) on building this menu.
 
 ##Requirements
-I used jQuery 1.11.0, but in that the only thing I'm doing with jQuery is toggling a class, you can get away with a _much_ older version.
+To use it - nothing really. A web browser. No dependency on jQuery, just straight JavaSce
 
 ##Usage
 This is all subject to change! I plan to not use jQuery for this, or at least write the code in pure JS at some point.
