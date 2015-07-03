@@ -1,7 +1,7 @@
 {
-  "name": "scrolling-nav",
+  "name": "offcanvas-menu",
   "version": "0.0.1",
-  "description": "scrolling nav sample",
+  "description": "Off-canvas navigation",
   "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
