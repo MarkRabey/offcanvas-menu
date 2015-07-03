@@ -1,6 +1,6 @@
 {
   "name": "offcanvas-menu",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Off-canvas Menu ",
   "main": "gruntfile.js",
   "repository": {
