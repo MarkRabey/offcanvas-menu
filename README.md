@@ -7,10 +7,10 @@ ___
 
 A working demo exists inside the `dist` folder.
 
-##Requirements
+## Requirements
 To use it - nothing really. A web browser. No dependency on jQuery, just plain old JavaScript.
 
-##Usage
+## Usage
 A working sample is available in the download, in the 'dist' folder.
 Eventually I'll have a Bower and/or NPM installation available. For now clone the repo or download the `.zip` and copy the CSS and JS files from inside the `dist` folder, to wherever in your project you would like.
 
@@ -50,10 +50,20 @@ Here is the expected HTML structure:
 </body>
 ```
 
-##Development
+## Development
 Feel free to do what you'd like with this. Clone or fork the repo, type `npm install` and have your way with it.
 
-##Coming soon
+## Coming soon
 * Fallback CSS for older versions of IE - maybe.
 * Bower and/or NPM packages
 * Not much other than that. This thing is pretty basic I think...
+
+---
+**Off-canvas Menu** © 2014-2015, Mark Rabey. Released under the [MIT] License.<br>
+Authored and maintained by Mark Rabey
+
+> [markrabey.com](http://markrabey.com) &nbsp;&middot;&nbsp;
+> GitHub [@MarkRabey](https://github.com/MarkRabey) &nbsp;&middot;&nbsp;
+> Twitter [@MarkRabey](https://twitter.com/MarkRabey)
+
+[MIT]: http://mit-license.org/
