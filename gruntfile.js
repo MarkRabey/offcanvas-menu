@@ -71,14 +71,14 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: 'src/js/*.js',
-				tasks: ['uglify'],
+				tasks: ['uglify', 'usebanner:js'],
 				options: {
 					interrupt: true,
 				},
 			},
 			css: {
 				files: 'src/less/*.less',
-				tasks: ['less','cssmin','usebanner'],
+				tasks: ['less','cssmin','usebanner:css'],
 				options: {
 					interrupt: true,
 				},
@@ -114,6 +114,25 @@ module.exports = function(grunt) {
 	      }
 	    }
 	  }
+
+		bump: {
+	    options: {
+	      files: ['package.json', 'bower.json'],
+	      updateConfigs: [],
+	      commit: true,
+	      commitMessage: 'Release v%VERSION%',
+	      commitFiles: ['package.json', 'bower.json'],
+	      createTag: true,
+	      tagName: '%VERSION%',
+	      tagMessage: 'Version %VERSION%',
+	      push: true,
+	      pushTo: 'upstream',
+	      gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+	      globalReplace: false,
+	      prereleaseName: false,
+	      regExp: false
+	    }
+	  },
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -123,8 +142,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-banner');
+	grunt.loadNpmTasks('grunt-bump');
 
 	// Default task(s).
-	grunt.registerTask('default', ['devbuild', 'watch']);
-	grunt.registerTask('devbuild', ['uglify','less','csslint','cssmin','jade','usebanner']);
+	grunt.registerTask('default', ['build', 'watch']);
+	grunt.registerTask('build', ['uglify','less','csslint','cssmin','jade','usebanner']);
 };
