@@ -1,7 +1,8 @@
 Off Canvas Menu
 ==============
-[![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table)
+[![Gitter chat](https://badges.gitter.im/MarkRabey/offcanvas-menu.png)](https://gitter.im/MarkRabey/offcanvas-menu "Gitter chat")
 
+[![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table)
 ___
 
 A working demo exists inside the `dist` folder.
