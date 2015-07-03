@@ -16,7 +16,7 @@
   ],
   "main": [
     "dist/includes/js/offcanvas-menu.min.js",
-    "dist/includes/css/offcanvas-menu.min.css",
+    "dist/includes/css/offcanvas-menu.min.css"
   ],
   "license": "MIT",
   "ignore": [
