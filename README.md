@@ -5,7 +5,7 @@ Off Canvas Menu
 [![devDependencies](https://david-dm.org/MarkRabey/offcanvas-menu/dev-status.svg)](https://david-dm.org/MarkRabey/offcanvas-menu#info=devDependencies&view=table) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Issues](http://img.shields.io/github/issues/MarkRabey/offcanvas-menu.svg)]( https://github.com/MarkRabey/offcanvas-menu/issues )
 ___
 
-A working demo exists inside the `dist` folder.
+Checkout the demo [here](https://markrabey.github.io/offcanvas-menu).
 
 ## Requirements
 To use it - nothing really. A web browser. No dependency on jQuery, just plain old JavaScript.
