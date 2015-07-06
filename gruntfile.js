@@ -4,13 +4,14 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		banner: '/** \n* Package: <%= pkg.name %> - version <%= pkg.version %> \n* Author: <%= pkg.author %> \n* Build Time: <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %>  \n*/\n',
+		clean: ["dist"],
 		uglify: {
 			build: {
 				files: [{
 					cwd: 'src/js',
 					expand: true,
 					src: ['*.js'],
-					dest: 'dist/includes/js/',
+					dest: 'dist/js/',
 					ext: '.min.js'
 				}]
 			}
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
 					cwd: 'src/css',
 					expand: true,
 					src: ['*.css'],
-					dest: 'dist/includes/css/',
+					dest: 'dist/css/',
 					ext: '.min.css'
 				}]
 			}, // close .build
@@ -54,20 +55,6 @@ module.exports = function(grunt) {
 				}]
 			}, // close .build
 		}, // close less
-		jade: {
-			compile: {
-			options: {
-				pretty: true
-			},
-			files: [{
-				expand: true,
-				cwd: 'src/views/',
-				src: [ '**/*.jade','!layout.jade' ],
-				dest: 'dist',
-				ext: '.html'
-			}]
-		  }
-		},
 		watch: {
 			js: {
 				files: 'src/js/*.js',
@@ -82,14 +69,7 @@ module.exports = function(grunt) {
 				options: {
 					interrupt: true,
 				},
-			},
-			jade: {
-				files: 'src/views/*.jade',
-				tasks: ['jade'],
-				options: {
-					interrupt: true,
-				},
-			},
+			}
 		},
 
 		usebanner: {
@@ -100,7 +80,7 @@ module.exports = function(grunt) {
 	        linebreak: true
 	      },
 	      files: {
-	        src: ['dist/includes/css/offcanvas-nav.min.css']
+	        src: ['dist/css/offcanvas-nav.min.css']
 	      }
 	    },
 			js: {
@@ -110,7 +90,7 @@ module.exports = function(grunt) {
 	        linebreak: true
 	      },
 	      files: {
-	        src: ['dist/includes/js/offcanvas-nav.min.js']
+	        src: ['dist/js/offcanvas-nav.min.js']
 	      }
 	    }
 	  },
@@ -139,11 +119,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-banner');
 	grunt.loadNpmTasks('grunt-bump');
 
 	// Default task(s).
 	grunt.registerTask('default', ['build', 'watch']);
-	grunt.registerTask('build', ['uglify','less','csslint','cssmin','jade','usebanner']);
+	grunt.registerTask('build', ['clean', 'uglify','less','csslint','cssmin','usebanner']);
 };
