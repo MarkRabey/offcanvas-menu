@@ -113,7 +113,7 @@ module.exports = function(grunt) {
 	        src: ['dist/includes/js/offcanvas-nav.min.js']
 	      }
 	    }
-	  }
+	  },
 
 		bump: {
 	    options: {

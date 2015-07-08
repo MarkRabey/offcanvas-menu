@@ -38,18 +38,73 @@ body {
   padding: 10px 0;
 }
 .offcanvas-nav__toggle {
+  display: inline-block;
+  padding: .5em;
   background-color: #2d2f33;
-  color: #ffffff;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
   position: fixed;
-  transform: translateX(0);
+  top: 0;
   -o-transition: transform ease-in 0.2s;
   -moz-transition: transform ease-in 0.2s;
   -webkit-transition: transform ease-in 0.2s;
   transition: transform ease-in 0.2s;
 }
-.offcanvas-nav__toggle--expanded  {
+.offcanvas-nav__toggle-icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.offcanvas-nav__toggle-icon,
+.offcanvas-nav__toggle-icon:before,
+.offcanvas-nav__toggle-icon:after {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.offcanvas-nav__toggle-icon:before,
+.offcanvas-nav__toggle-icon:after {
+  position: absolute;
+  content: "";
+}
+.offcanvas-nav__toggle-icon:before {
+  top: -8px;
+}
+.offcanvas-nav__toggle-icon:after {
+  top: 8px;
+}
+.offcanvas-nav__toggle--expanded {
   transform: translateX(300px);
+}
+.offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon {
+  background-color: transparent;
+}
+.offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon:before,
+.offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon:after {
+  background-color: #ffffff;
+}
+.offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon:before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+.offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon:after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
