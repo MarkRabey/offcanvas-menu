@@ -1,3 +1,5 @@
+@import "bower_components/less-burger/src/less/less-burger.less";
+
 @menu-background-color: #2d2f33;
 @menu-text-color: #fff;
 @menu-width: 300px;
@@ -54,17 +56,25 @@ html,body {
 }
 
 .offcanvas-nav__toggle {
+	display: inline-block;
+	padding: .5em;
 	background-color: @menu-background-color;
-	color: @menu-text-color;
-	padding: 10px;
-	text-decoration: none;
-	display: block;
 	position: fixed;
-	transform: translateX(0);
+	top: 0;
 
 	.transformTransition();
 }
 
-.offcanvas-nav__toggle--expanded & {
+.offcanvas-nav__toggle-icon {
+	.burger(25px, 3px, 5px, @menu-text-color);
+
+
+}
+
+.offcanvas-nav__toggle--expanded {
+	.offcanvas-nav__toggle-icon {
+		.burger-to-cross(3px, 5px, @menu-text-color);
+	}
+
 	transform: translateX(@menu-width);
 }
