@@ -6,6 +6,7 @@ Off Canvas Menu
 ___
 
 Checkout the demo [here](https://markrabey.github.io/offcanvas-menu).
+Uses [Less Burger](https://github.com/less-burger) icon.
 
 ## Requirements
 To use it - nothing really. A web browser. No dependency on jQuery, just plain old JavaScript.
