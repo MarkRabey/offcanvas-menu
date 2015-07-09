@@ -10,15 +10,24 @@ body {
   position: fixed;
   font-size: 15px;
   top: 0;
-  width: 300px;
+  width: 250px;
   z-index: 2000;
-  transform: translateX(-300px);
-  -o-transition: transform ease-in 0.2s;
-  -moz-transition: transform ease-in 0.2s;
-  -webkit-transition: transform ease-in 0.2s;
+  -o-transform: translateX(-250px);
+  -moz-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
+  -o-transition: -o-transform ease-in 0.2s;
+  -moz-transition: -moz-transform ease-in 0.2s;
+  -ms-transition: -moz-transform ease-in 0.2s;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
   transition: transform ease-in 0.2s;
 }
 .offcanvas-nav--expanded {
+  -o-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .offcanvas-nav__list {
@@ -43,9 +52,10 @@ body {
   background-color: #2d2f33;
   position: fixed;
   top: 0;
-  -o-transition: transform ease-in 0.2s;
-  -moz-transition: transform ease-in 0.2s;
-  -webkit-transition: transform ease-in 0.2s;
+  -o-transition: -o-transform ease-in 0.2s;
+  -moz-transition: -moz-transform ease-in 0.2s;
+  -ms-transition: -moz-transform ease-in 0.2s;
+  -webkit-transition: -webkit-transform ease-in 0.2s;
   transition: transform ease-in 0.2s;
 }
 .offcanvas-nav__toggle-icon {
@@ -85,7 +95,11 @@ body {
   top: 8px;
 }
 .offcanvas-nav__toggle--expanded {
-  transform: translateX(300px);
+  -o-transform: translateX(250px);
+  -moz-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+  transform: translateX(250px);
 }
 .offcanvas-nav__toggle--expanded .offcanvas-nav__toggle-icon {
   background-color: transparent;

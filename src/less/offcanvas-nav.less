@@ -2,12 +2,21 @@
 
 @menu-background-color: #2d2f33;
 @menu-text-color: #fff;
-@menu-width: 300px;
+@menu-width: 250px;
 
-.transformTransition() {
-	-o-transition: transform ease-in 0.2s;
-	-moz-transition: transform ease-in 0.2s;
-	-webkit-transition: transform ease-in 0.2s;
+.translateX(@x) {
+	-o-transform: translateX(@x);
+	-moz-transform: translateX(@x);
+	-ms-transform: translateX(@x);
+	-webkit-transform: translateX(@x);
+	transform: translateX(@x);
+}
+
+.transition-transform() {
+	-o-transition: -o-transform ease-in 0.2s;
+	-moz-transition: -moz-transform ease-in 0.2s;
+	-ms-transition: -moz-transform ease-in 0.2s;
+	-webkit-transition: -webkit-transform ease-in 0.2s;
 	transition: transform ease-in 0.2s;
 }
 
@@ -25,14 +34,15 @@ html,body {
 	top: 0;
 	width: @menu-width;
 	z-index: 2000;
-	transform: translateX(-@menu-width);
 
-	.transformTransition();
+	.translateX(-@menu-width);
+
+	.transition-transform();
 
 }
 
 	.offcanvas-nav--expanded {
-		transform: translateX(0);
+		.translateX(0);
 	}
 
 .offcanvas-nav__list {
@@ -62,7 +72,7 @@ html,body {
 	position: fixed;
 	top: 0;
 
-	.transformTransition();
+	.transition-transform();
 }
 
 .offcanvas-nav__toggle-icon {
@@ -76,5 +86,5 @@ html,body {
 		.burger-to-cross(3px, 5px, @menu-text-color);
 	}
 
-	transform: translateX(@menu-width);
+	.translateX(@menu-width);
 }
