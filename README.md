@@ -6,7 +6,7 @@ Off Canvas Menu
 ___
 
 Check [here](http://markrabey.github.io/offcanvas-menu/) for a demo.
-Uses [Less Burger](https://github.com/less-burger) icon.
+Uses [Less Burger](https://github.com/MarkRabey/less-burger) icon.
 
 ## Installation
 ### Bower
